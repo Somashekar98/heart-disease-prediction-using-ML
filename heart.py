@@ -210,10 +210,8 @@ print_score(knn_clf, X_train, y_train, X_test, y_test, train=False)
 test_score = accuracy_score(y_test, knn_clf.predict(X_test)) * 100
 train_score = accuracy_score(y_train, knn_clf.predict(X_train)) * 100
 
-results_df_2 = pd.DataFrame(data=[["Tuned K-nearest neighbors", train_score, test_score]], 
-                          columns=['Model', 'Training Accuracy %', 'Testing Accuracy %'])
+results_df_2 = pd.DataFrame(data=[["Tuned K-nearest neighbors", train_score, test_score]], columns=['Model', 'Training Accuracy %', 'Testing Accuracy %'])
 tuning_results_df = tuning_results_df.append(results_df_2, ignore_index=True)
-tuning_results_df
 
 
 
